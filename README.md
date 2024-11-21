@@ -31,3 +31,6 @@ Once the server is up and running, you can run the Android application to see Gr
 - Open the Android project in Android Studio.
 - Make sure you have an emulator or a physical device connected.
 - Click the **Run** button to install and launch the app.
+
+## License
+This project is open-source and available under the **MIT License**.

@@ -19,3 +19,16 @@ query GetFilteredBooks($genre: String, $minPrice: Float, $maxPrice: Float) {
         ...BookDetails
     }
 }
+
+query Search($keyword: String!) {
+    search(keyword: $keyword ) {
+        ...on Book {
+            title
+            price
+        }
+        ...on Author {
+            name
+            bio
+        }
+    }
+}
