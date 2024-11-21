@@ -1,0 +1,27 @@
+mutation AddBook($title: String!, $authorId: ID!, $genre: String!, $price: Float!){
+    addBook(title: $title, genre: $genre, authorId: $authorId, price: $price){
+        id
+        title
+        genre
+        price
+        author {
+            name
+        }
+    }
+}
+
+mutation UpdateBook($id: ID!, $title: String, $genre: String, $price: Float){
+    updateBook(id: $id, title: $title, genre: $genre, price: $price){
+        id
+        title
+        genre
+        price
+        author {
+            name
+        }
+    }
+}
+
+mutation DeleteBook($id: ID!){
+    deleteBook(id: $id)
+}
