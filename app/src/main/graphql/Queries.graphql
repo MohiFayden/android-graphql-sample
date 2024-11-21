@@ -1,23 +1,21 @@
+fragment BookDetails on Book {
+    id
+    title
+    genre
+    price
+    author {
+        name
+    }
+}
+
 query GetBooks {
     books {
-        id
-        title
-        genre
-        price
-        author {
-            name
-        }
+        ...BookDetails
     }
 }
 
 query GetFilteredBooks($genre: String, $minPrice: Float, $maxPrice: Float) {
     books(genre: $genre, minPrice: $minPrice, maxPrice: $maxPrice) {
-        id
-        title
-        genre
-        price
-        author {
-            name
-        }
+        ...BookDetails
     }
 }
